@@ -23,6 +23,12 @@ import sys
 from dataclasses import dataclass, field
 from typing import List, Dict, Tuple, Optional
 
+# Windows 控制台默认 cp1252/GBK，打印中文会崩；强制 utf-8。
+if hasattr(sys.stdout, "reconfigure"):
+    sys.stdout.reconfigure(encoding="utf-8", errors="replace")
+if hasattr(sys.stderr, "reconfigure"):
+    sys.stderr.reconfigure(encoding="utf-8", errors="replace")
+
 
 # ============================================================
 # 数据模型

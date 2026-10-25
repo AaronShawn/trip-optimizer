@@ -14,6 +14,12 @@ import json
 import os
 import sys
 
+# Windows 控制台默认 cp1252/GBK，打印中文会崩；强制 utf-8。
+if hasattr(sys.stdout, "reconfigure"):
+    sys.stdout.reconfigure(encoding="utf-8", errors="replace")
+if hasattr(sys.stderr, "reconfigure"):
+    sys.stderr.reconfigure(encoding="utf-8", errors="replace")
+
 DAY_COLORS = ["#c0392b", "#2471a3", "#1e8449", "#8e44ad", "#d68910", "#117a8b"]
 
 HTML = """<!DOCTYPE html>

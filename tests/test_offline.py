@@ -7,6 +7,11 @@
 import os
 import sys
 
+# Windows 控制台默认 cp1252/GBK，直接 print 中文会 UnicodeEncodeError。
+# GitHub Actions 的 windows runner 就是这种情况，必须显式切 utf-8。
+if hasattr(sys.stdout, "reconfigure"):
+    sys.stdout.reconfigure(encoding="utf-8", errors="replace")
+
 sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "scripts"))
 
 import geo

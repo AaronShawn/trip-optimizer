@@ -14,6 +14,12 @@ import os
 import sys
 import time
 
+# Windows 控制台默认 cp1252/GBK，打印中文会崩；强制 utf-8。
+if hasattr(sys.stdout, "reconfigure"):
+    sys.stdout.reconfigure(encoding="utf-8", errors="replace")
+if hasattr(sys.stderr, "reconfigure"):
+    sys.stderr.reconfigure(encoding="utf-8", errors="replace")
+
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 
 import geo

@@ -14,8 +14,13 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
+        # ubuntu-latest 已升到 26.04，该镜像不再提供 Python 3.9；
+        # 3.9 用 ubuntu-22.04 单独覆盖，其余版本跑 latest。
         os: [ubuntu-latest, windows-latest, macos-latest]
-        python-version: ["3.9", "3.11", "3.13"]
+        python-version: ["3.11", "3.13"]
+        include:
+          - os: ubuntu-22.04
+            python-version: "3.9"
 
     steps:
       - uses: actions/checkout@v4
@@ -29,6 +34,10 @@ jobs:
         run: python -m compileall -q scripts tests
 
       - name: 运行离线测试
+        env:
+          # Windows runner 控制台是 cp1252，双保险
+          PYTHONIOENCODING: utf-8
+          PYTHONUTF8: "1"
         run: python tests/test_offline.py
 
   no-third-party-deps:
