@@ -1,0 +1,22 @@
+# 依赖与缓存
+.cache/
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+
+# 生成物
+plan*.json
+itinerary*.html
+dist/
+*.zip
+
+# 编辑器 / 系统
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# 本地配置
+.env
+*.local.json

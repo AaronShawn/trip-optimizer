@@ -1,0 +1,62 @@
+name: tests
+
+on:
+  push:
+    branches: [main, master]
+  pull_request:
+    branches: [main, master]
+  workflow_dispatch:
+
+jobs:
+  offline-tests:
+    name: 离线测试 (${{ matrix.os }} / Py${{ matrix.python-version }})
+    runs-on: ${{ matrix.os }}
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, windows-latest, macos-latest]
+        python-version: ["3.9", "3.11", "3.13"]
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: 设置 Python ${{ matrix.python-version }}
+        uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+
+      - name: 语法检查
+        run: python -m compileall -q scripts tests
+
+      - name: 运行离线测试
+        run: python tests/test_offline.py
+
+  no-third-party-deps:
+    name: 零第三方依赖校验
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
+
+      - name: 确认 scripts/ 只使用标准库
+        run: python tests/check_no_deps.py
+
+      - name: 导入所有模块
+        working-directory: scripts
+        run: |
+          python -c "import geo, sources, trip_opt; print('imports ok')"
+          python -c "import pipeline, render; print('imports ok')"
+
+  render-smoke:
+    name: 渲染冒烟测试（离线）
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
+
+      - name: 用伪造 plan 验证 HTML 渲染
+        run: python tests/test_render.py

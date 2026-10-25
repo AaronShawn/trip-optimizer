@@ -1,0 +1,104 @@
+{
+  "city": "成都",
+  "days": 2,
+  "pace": "标准",
+  "travel_mode": "hybrid",
+  "day_start": 540,
+  "day_end": 1260,
+  "places": [
+    {
+      "name": "成都大熊猫繁育研究基地",
+      "visit_min": 180,
+      "priority": 1,
+      "rating": 4.9,
+      "ticket": 55,
+      "open_time": 450,
+      "close_time": 1080,
+      "category": "动物"
+    },
+    {
+      "name": "武侯祠",
+      "visit_min": 90,
+      "priority": 1,
+      "rating": 4.6,
+      "ticket": 50,
+      "open_time": 480,
+      "close_time": 1200,
+      "category": "历史"
+    },
+    {
+      "name": "杜甫草堂",
+      "visit_min": 90,
+      "priority": 2,
+      "rating": 4.7,
+      "ticket": 50,
+      "open_time": 480,
+      "close_time": 1140,
+      "category": "历史"
+    },
+    {
+      "name": "宽窄巷子",
+      "visit_min": 90,
+      "priority": 2,
+      "rating": 4.4,
+      "ticket": 0,
+      "open_time": 0,
+      "close_time": 1440,
+      "category": "街区"
+    },
+    {
+      "name": "锦里",
+      "visit_min": 90,
+      "priority": 2,
+      "rating": 4.3,
+      "ticket": 0,
+      "open_time": 0,
+      "close_time": 1440,
+      "category": "街区"
+    },
+    {
+      "name": "春熙路",
+      "visit_min": 60,
+      "priority": 3,
+      "rating": 4.2,
+      "ticket": 0,
+      "open_time": 0,
+      "close_time": 1440,
+      "category": "商圈"
+    },
+    {
+      "name": "成都博物馆",
+      "visit_min": 120,
+      "priority": 3,
+      "rating": 4.7,
+      "ticket": 0,
+      "open_time": 540,
+      "close_time": 1020,
+      "closed_days": [
+        0
+      ],
+      "category": "博物馆",
+      "indoor": true
+    },
+    {
+      "name": "青羊宫",
+      "visit_min": 60,
+      "priority": 3,
+      "rating": 4.3,
+      "ticket": 10,
+      "open_time": 480,
+      "close_time": 1080,
+      "category": "宗教"
+    },
+    {
+      "name": "人民公园",
+      "visit_min": 60,
+      "priority": 3,
+      "rating": 4.4,
+      "ticket": 0,
+      "open_time": 360,
+      "close_time": 1320,
+      "category": "公园"
+    }
+  ]
+}

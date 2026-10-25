@@ -1,0 +1,160 @@
+{
+  "city": "北京",
+  "days": 3,
+  "pace": "标准",
+  "travel_mode": "hybrid",
+  "day_start": 540,
+  "day_end": 1260,
+  "places": [
+    {
+      "name": "故宫博物院",
+      "visit_min": 180,
+      "priority": 1,
+      "rating": 4.9,
+      "ticket": 60,
+      "open_time": 510,
+      "close_time": 1020,
+      "closed_days": [
+        0
+      ],
+      "category": "历史"
+    },
+    {
+      "name": "天安门广场",
+      "visit_min": 45,
+      "priority": 1,
+      "rating": 4.7,
+      "ticket": 0,
+      "open_time": 300,
+      "close_time": 1320,
+      "category": "地标"
+    },
+    {
+      "name": "天坛公园",
+      "visit_min": 120,
+      "priority": 1,
+      "rating": 4.8,
+      "ticket": 34,
+      "open_time": 360,
+      "close_time": 1260,
+      "category": "历史"
+    },
+    {
+      "name": "颐和园",
+      "visit_min": 180,
+      "priority": 1,
+      "rating": 4.8,
+      "ticket": 30,
+      "open_time": 390,
+      "close_time": 1200,
+      "category": "园林"
+    },
+    {
+      "name": "景山公园",
+      "visit_min": 60,
+      "priority": 2,
+      "rating": 4.7,
+      "ticket": 2,
+      "open_time": 390,
+      "close_time": 1230,
+      "category": "园林"
+    },
+    {
+      "name": "北海公园",
+      "visit_min": 90,
+      "priority": 2,
+      "rating": 4.6,
+      "ticket": 10,
+      "open_time": 390,
+      "close_time": 1230,
+      "category": "园林"
+    },
+    {
+      "name": "南锣鼓巷",
+      "visit_min": 90,
+      "priority": 2,
+      "rating": 4.3,
+      "ticket": 0,
+      "open_time": 600,
+      "close_time": 1320,
+      "category": "街区"
+    },
+    {
+      "name": "什刹海",
+      "visit_min": 90,
+      "priority": 2,
+      "rating": 4.6,
+      "ticket": 0,
+      "open_time": 0,
+      "close_time": 1440,
+      "category": "街区"
+    },
+    {
+      "name": "雍和宫",
+      "visit_min": 60,
+      "priority": 2,
+      "rating": 4.7,
+      "ticket": 25,
+      "open_time": 540,
+      "close_time": 960,
+      "category": "宗教"
+    },
+    {
+      "name": "圆明园遗址公园",
+      "visit_min": 150,
+      "priority": 3,
+      "rating": 4.5,
+      "ticket": 15,
+      "open_time": 420,
+      "close_time": 1140,
+      "category": "历史"
+    },
+    {
+      "name": "国家博物馆",
+      "visit_min": 150,
+      "priority": 3,
+      "rating": 4.8,
+      "ticket": 0,
+      "open_time": 540,
+      "close_time": 990,
+      "closed_days": [
+        0
+      ],
+      "category": "博物馆",
+      "indoor": true
+    },
+    {
+      "name": "鸟巢",
+      "visit_min": 60,
+      "priority": 3,
+      "rating": 4.4,
+      "ticket": 50,
+      "open_time": 540,
+      "close_time": 1290,
+      "category": "地标"
+    },
+    {
+      "name": "798艺术区",
+      "visit_min": 120,
+      "priority": 3,
+      "rating": 4.4,
+      "ticket": 0,
+      "open_time": 600,
+      "close_time": 1200,
+      "category": "艺术"
+    },
+    {
+      "name": "恭王府",
+      "visit_min": 90,
+      "priority": 3,
+      "rating": 4.6,
+      "ticket": 40,
+      "open_time": 510,
+      "close_time": 1020,
+      "closed_days": [
+        0
+      ],
+      "category": "历史"
+    }
+  ]
+}

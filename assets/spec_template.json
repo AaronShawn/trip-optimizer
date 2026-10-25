@@ -1,0 +1,53 @@
+{
+  "_comment": "trip-optimizer spec 模板。所有字段除 city/days/places 外都有默认值，可以删掉不写。",
+  "city": "北京",
+  "days": 3,
+  "pace": "标准",
+  "travel_mode": "hybrid",
+  "day_start": 540,
+  "day_end": 1260,
+  "max_pois_per_day": 6,
+
+  "w_travel": 1.0,
+  "w_value": 60.0,
+  "w_ticket": 2.0,
+  "w_balance": 150.0,
+  "long_leg_min": 45.0,
+  "stretch_factor": 0.6,
+  "insert_threshold": 900.0,
+
+  "places": [
+    {
+      "name": "故宫博物院",
+      "visit_min": 180,
+      "priority": 1,
+      "rating": 4.9,
+      "ticket": 60,
+      "open_time": 510,
+      "close_time": 1020,
+      "closed_days": [0],
+      "category": "历史",
+      "indoor": false
+    },
+    {
+      "name": "天坛公园",
+      "visit_min": 120,
+      "priority": 1,
+      "rating": 4.8,
+      "ticket": 34,
+      "open_time": 360,
+      "close_time": 1260,
+      "category": "历史"
+    },
+    {
+      "name": "南锣鼓巷",
+      "visit_min": 90,
+      "priority": 2,
+      "rating": 4.3,
+      "ticket": 0,
+      "open_time": 600,
+      "close_time": 1320,
+      "category": "街区"
+    }
+  ]
+}
